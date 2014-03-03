@@ -58,7 +58,7 @@ describe "GuessHtmlEncoding" do
     end
     
     it "should not raise an exception if data is nil" do
-      GuessHtmlEncoding.guess(nil).should_not raise_error(TypeError)
+      lambda { GuessHtmlEncoding.guess(nil) }.should_not raise_error
     end
   end
 
@@ -110,7 +110,7 @@ describe "GuessHtmlEncoding" do
     end
 
     it "should not raise an exception if data is nil" do
-      GuessHtmlEncoding.encode(nil).should_not raise_error(TypeError)
+      lambda { GuessHtmlEncoding.encode(nil) }.should_not raise_error
     end
 
     it 'should not raise an exception if headers is an empty Hash' do
